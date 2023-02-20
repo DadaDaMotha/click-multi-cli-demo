@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "cookiecutter-click-multi-cli"
+version = "0.1.0"
+description = "Multicommand cli template using click"
+authors = ["PonyM <dev@lksch.ch>"]
+readme = "README.md"
+packages = [{include = "cookiecutter_click_multi_cli"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.3"
+rich = "^13.3.1"
+
+[tool.poetry.scripts]
+cookiecutter_click_multi_cli = "cookiecutter_click_multi_cli.loader:cookiecutter_click_multi_cli_cli"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
